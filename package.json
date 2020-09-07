@@ -2,7 +2,7 @@
   "name": "http2_node",
   "version": "1.0.0",
   "description": "Look at using the http2 core library to setup a client-proxy-server, all within a containerised environment",
-  "main": "./server/server.js",
+  "main": "./server/server.js &&",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

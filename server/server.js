@@ -4,8 +4,8 @@ import fs from 'fs';
 const PORT = 8443;
 
 const server = http2.createSecureServer({
-    key: fs.readFileSync('server/timbo-privkey.pem'),
-    cert: fs.readFileSync('server/timbo-cert.pem')
+    key: fs.readFileSync('certs/timbo-privkey.pem'),
+    cert: fs.readFileSync('certs/timbo-cert.pem')
 });
 
 server.on('error', (err) => console.error(err));
