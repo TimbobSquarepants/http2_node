@@ -11,10 +11,9 @@ import fs from 'fs';
 
 // Setup the client to connect to Edge Function
 const proxy = http2.connect('https://timbo-htpc:8451', {
-    ca: fs.readFileSync('certs/timbo-cert.pem')
+    ca: fs.readFileSync('../certs/timbo-cert.pem')
 });
 proxy.on('error', (err) => console.log(err));
-
 // Set Data Variables
 var body = "Data from the client"
 var headers = {

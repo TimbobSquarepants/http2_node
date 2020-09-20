@@ -6,11 +6,11 @@ let backend_port = 8543;
 let backend_address = 'https://timbo-htpc:';
 
 const proxy_server = http2.createSecureServer({
-    key: fs.readFileSync('certs/timbo-privkey.pem'),
-    cert: fs.readFileSync('certs/timbo-cert.pem')
+    key: fs.readFileSync('../certs/timbo-privkey.pem'),
+    cert: fs.readFileSync('../certs/timbo-cert.pem')
 });
 const backend_connection = http2.connect(backend_address + backend_port, {
-    ca : fs.readFileSync('certs/timbo-cert.pem')
+    ca : fs.readFileSync('../certs/timbo-cert.pem')
 });
 
 // General Error catching

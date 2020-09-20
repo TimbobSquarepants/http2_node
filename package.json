@@ -5,6 +5,7 @@
   "main": "./server/server.js &&",
   "type": "module",
   "scripts": {
+    "build": "node server/server.js & node proxy/proxy.js & node client/client.js &  ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +18,8 @@
     "url": "https://github.com/TimbobSquarepants/http2_node/issues"
   },
   "homepage": "https://github.com/TimbobSquarepants/http2_node#readme",
-  "dependencies": {},
-  "devDependencies": {
-    "eslint": "^7.8.1"
-  }
+  "dependencies": {
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {}
 }
