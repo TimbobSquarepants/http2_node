@@ -4,19 +4,23 @@ import fs from 'fs';
 const PORT = 8543;
 
 const server = http2.createSecureServer({
-    key: fs.readFileSync('../certs/timbo-privkey.pem'),
-    cert: fs.readFileSync('../certs/timbo-cert.pem')
+    key: fs.readFileSync('timbo-privkey.pem'),
+    cert: fs.readFileSync('timbo-cert.pem')
 });
 
 server.on('error', (err) => console.error(err));
 
-server.on('stream', (stream) =>{
+server.on('stream', (stream, headers) =>{
     console.log("recieved Connection");
     // stream is a Duplex
     stream.respond({
         'content-type': 'text/html; charset=utf-8',
         ':status': 200,
     });
+    console.log(headers['origin']);
+    console.log(headers)
+  
+    
     let data = '';
     stream.on('error', (error) => console.error(error));
 
@@ -27,4 +31,4 @@ server.on('stream', (stream) =>{
     });
 });
 console.log('Hosting server at: ' + PORT);
-server.listen(PORT, "timbo-htpc");
+server.listen(PORT);

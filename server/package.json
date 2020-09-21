@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Simple look at docker server handling requests as streams",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimbobSquarepants/http2_node.git"
+  },
+  "author": "Timothy Finn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimbobSquarepants/http2_node/issues"
+  },
+  "homepage": "https://github.com/TimbobSquarepants/http2_node#readme"
+}
